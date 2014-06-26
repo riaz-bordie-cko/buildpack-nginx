@@ -15,9 +15,6 @@ http {
 		server_name  _;
 		root <%= ENV.fetch('root', '/app/www') %>;
 		g.html index index.html;
-		
-		location / {
-			try_files $uri /index.html;
-		}
+		try_files $uri $uri/ /index.html;
 	}
 }
