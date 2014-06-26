@@ -19,5 +19,9 @@ http {
 		location / {
 			try_files $uri /index.html;
 		}
+		
+		location ~* /assets/ {
+		
+		}
 	}
 }
